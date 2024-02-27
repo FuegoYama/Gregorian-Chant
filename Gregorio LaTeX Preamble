@@ -1,0 +1,53 @@
+% gregorio tex preamble
+\documentclass[14pt]{extarticle} % default font size = 14 pt
+
+% packages
+\usepackage{fontspec}
+\usepackage[top=1.125in,left=1.125in,right=1.125in,bottom=1.125in,marginparwidth=1in,marginparsep=2ex]{geometry}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[letterspace=200]{microtype}
+\usepackage{marginnote}
+\usepackage{soul}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{ebgaramond}
+
+% styling
+\newcommand{\headingone}{\scshape\Large}
+\newcommand{\headingtwo}{\large}
+\newcommand{\margintext}[1]{\textit{\small #1}}
+
+% skips-horizontal
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+
+% skips-vertical
+\newcommand{\linespace}{\vskip 4pt}
+\newcommand{\paragraphspace}{\vskip 6pt}
+\newcommand{\segmentspace}{\vskip 12pt}
+\newcommand{\sectionspace}{\vskip 24pt}
+
+% gregorio-settings
+\gresetlinecolor{gregoriocolor} %makes red leger lines
+
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % reduces first initial to more proportionate size (=36pt)
+\grechangestyle{annotation}{\scshape} % mode annotations are in small caps
+\grechangestyle{commentary}{\small} % commentary above music is small text
+
+\gresetheadercapture{commentary}{grecommentary}{string} % reads commentary as an "as is" string, allowing it to render
+
+\grechangedim{commentaryraise}{0.5cm}{scalable} % raises commentary sufficiently above top leger line
+
+% page styling
+\parindent=0pt
+\emergencystretch=3em
+\columnsep=1em
+\reversemarginpar
+%\setlength
+
+%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%
+\end{document}
