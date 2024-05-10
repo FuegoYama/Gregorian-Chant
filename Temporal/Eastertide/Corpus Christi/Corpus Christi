@@ -1,0 +1,96 @@
+% Mass of Corpus Christi
+% Created: May 10, 2024
+% Edited: May 10,2024
+\documentclass[14pt]{extarticle}
+
+% packages
+\usepackage{fontspec}
+\usepackage[top=1.25in,left=1.25in,right=1.25in,bottom=1.25in,marginparwidth=1in,marginparsep=2ex]{geometry}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[letterspace=200]{microtype}
+\usepackage{marginnote}
+\usepackage{soul}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{ebgaramond}
+
+% commands
+\newcommand{\series}{\scshape\Large}
+\newcommand{\exer}{\large}
+\newcommand{\marp}{\small\em}
+\newcommand{\piecetitle}[2]{\begin{center}\textsc{\large\lsstyle #1}\paragraphspace{\em #2}\end{center}}
+
+% skips-horizontal
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+
+% skips-vertical
+\newcommand{\linespace}{\vskip 4pt}
+\newcommand{\paragraphspace}{\vskip 9pt}
+\newcommand{\segmentspace}{\vskip 18pt}
+\newcommand{\sectionspace}{\vskip 24pt}
+
+% gregorio-settings
+\gresetlinecolor{gregoriocolor}
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont}
+\grechangestyle{annotation}{\scshape}
+\gresetheadercapture{commentary}{grecommentary}{string}
+\grechangestyle{commentary}{\small}
+\grechangedim{commentaryraise}{0.5cm}{scalable}
+
+% page settings, declarations
+\parindent=0pt
+\emergencystretch=3em
+\columnsep=1em
+\reversemarginpar
+%\setlength
+
+%%%%%%%%%%
+\begin{document}
+
+% title
+
+\piecetitle{Sanctissimum Corpus Christi}{Feria V post Sanctissim\ae\ Festum Trinitatis}
+
+\hrule
+\paragraphspace
+
+% 1 - introit
+
+\marginnote{\marp Introitus}[8pt]
+\gregorioscore{1-in-cibavit-eos-solesmes}
+\segmentspace
+
+
+% 2 - gradual
+
+\marginnote{\marp Graduale}[8pt]
+\gregorioscore{2-gr-oculi-omnium-solesmes}
+\segmentspace
+
+% 3 - alleluia
+
+\marginnote{\marp Alleluia}[8pt]
+\gregorioscore{3-al-caro-mea-vere-solesmes}
+\segmentspace
+
+% 4 - sequence
+
+\marginnote{\marp Sequentia}[8pt]
+\gregorioscore{4-se-lauda-sion-solesmes}
+\segmentspace
+
+% 5 - offertory
+
+\marginnote{\marp Offertorio}[8pt]
+\gregorioscore{5-of-sacerdotes-domini-solesmes}
+\segmentspace
+
+% 6 - communion
+
+\marginnote{\marp Communio}[8pt]
+\gregorioscore{6-co-quotiescumque-solesmes}
+\segmentspace
+
+\end{document}
