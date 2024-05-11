@@ -1,0 +1,94 @@
+% Mass of the Sacred Heart of Jesus
+% Created: June 9, 2023
+% Edited: May 10, 2024
+\documentclass[14pt]{extarticle}
+
+% packages
+\usepackage{fontspec}
+\usepackage[top=1.125in,left=1.125in,right=1.125in,bottom=1.125in,marginparwidth=1in,marginparsep=2ex]{geometry}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[letterspace=200]{microtype}
+\usepackage{marginnote}
+\usepackage{soul}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{ebgaramond}
+
+% styling
+\newcommand{\headingone}{\scshape\Large}
+\newcommand{\headingtwo}{\large}
+\newcommand{\margintext}[1]{\textit{\small #1}}
+\newcommand{\marp}{\small\em}
+\newcommand{\piecetitle}[2]{\begin{center}\textsc{\large\lsstyle #1}\paragraphspace{\em #2}\end{center}}
+
+% skips-horizontal
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+
+% skips-vertical
+\newcommand{\linespace}{\vskip 4pt}
+\newcommand{\paragraphspace}{\vskip 9pt}
+\newcommand{\segmentspace}{\vskip 18pt}
+\newcommand{\sectionspace}{\vskip 24pt}
+
+% gregorio-settings
+\gresetlinecolor{gregoriocolor} %makes red leger lines
+
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % reduces first initial to more proportionate size
+\grechangestyle{annotation}{\scshape} % mode annotations are in small caps
+\grechangestyle{commentary}{\small} % commentary above music is small text
+
+\gresetheadercapture{commentary}{grecommentary}{string} % reads commentary as an "as is" string, allowing it to render
+
+\grechangedim{commentaryraise}{0.5cm}{scalable} % raises commentary sufficiently above top leger line
+
+% page styling
+\parindent=0pt
+\emergencystretch=3em
+\columnsep=1em
+\reversemarginpar
+%\setlength
+
+%%%%%%%%%%
+\begin{document}
+
+% title
+
+\piecetitle{Cor Jesu Sacratissimum}{Feria VI post Octavam Ssi. Corporis Christi}
+
+\hrule
+\paragraphspace
+
+% 1 - introit
+
+\marginnote{\marp Introitus}[8pt]
+\gregorioscore{1-in-cogitationes}
+\segmentspace
+
+% 2 - gradual
+
+\marginnote{\marp Graduale}[8pt]
+\gregorioscore{2-gr-dulcis}
+\segmentspace
+
+% 3 - alleluia
+
+\marginnote{\marp Alleluia}[8pt]
+\gregorioscore{3-al-tollite}
+\segmentspace
+
+% 4- offertory
+
+\marginnote{\marp Offertorio}[8pt]
+\gregorioscore{4-of-improperium}
+\segmentspace
+
+% 5 - communion
+
+\marginnote{\marp Communio}[8pt]
+\gregorioscore{5-co-unus}
+\segmentspace
+
+%%%%%%%%%%
+\end{document}
